@@ -1,4 +1,4 @@
-# Install etcd3 through Ansible
+# Provision etcd3 cluster with Ansible
 
 ## Playbook
 
@@ -18,6 +18,14 @@ END
 ## Run
 
 ```
-$ansible-playbook -i hosts.example site.yml
+ansible-playbook -i hosts.example site.yml
+```
+
+## Example etcdctl 
+
+etcdctl is install under /usr/local/bin 
+
+```
+ETCDCTL_API=3 ./etcdctl --endpoints=172.28.128.16:2379 member list
 ```
 

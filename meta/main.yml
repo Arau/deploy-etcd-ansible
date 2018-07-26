@@ -1,0 +1,8 @@
+galaxy_info:
+  author: Jeff Silberman
+  forkedby: Ferran Castell
+  description: etcd3 installer
+  license: Apache
+  min_ansible_version: 2.2
+  platforms:
+dependencies: []

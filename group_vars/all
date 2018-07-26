@@ -1,0 +1,2 @@
+etcd_version: "3.3.8"
+members: "{{ groups['nodes'] }}"

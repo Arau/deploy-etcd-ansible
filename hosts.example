@@ -1,0 +1,4 @@
+[nodes]
+centos-1 IP=172.28.128.14
+centos-2 IP=172.28.128.15
+centos-3 IP=172.28.128.16
