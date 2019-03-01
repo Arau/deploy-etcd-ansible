@@ -1,4 +1,6 @@
 etcd_version: "3.3.11"
 etcd_port_client: "2379"
 etcd_port_peers: "2380"
+etcd_quota_bytes: 8589934592  # 8 GB
+etcd_compaction_retention: 2 # 2Hours
 members: "{{ groups['nodes'] }}"
