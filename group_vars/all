@@ -1,2 +1,4 @@
-etcd_version: "3.3.8"
+etcd_version: "3.3.11"
+etcd_port_client: "2379"
+etcd_port_peers: "2380"
 members: "{{ groups['nodes'] }}"
