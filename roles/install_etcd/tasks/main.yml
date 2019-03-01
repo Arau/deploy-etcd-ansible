@@ -1,13 +1,3 @@
-- name: Remove any old existing etcd
-  package:
-    name: etcd
-    state: absent
-  ignore_errors: yes
-- name: Remove any old existing etcd2
-  package:
-    name: etcd2
-    state: absent
-  ignore_errors: yes
 - name: Remove any old existing etcd3
   package:
     name: etcd3
@@ -18,7 +8,7 @@
     name: wget
     state: latest
 - name: Set up persistent etcd data directory
-  file: 
+  file:
     path:  /var/lib/etcd 
     state: directory
     owner: root
