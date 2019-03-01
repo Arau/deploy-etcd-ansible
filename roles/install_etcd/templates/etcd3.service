@@ -1,6 +1,8 @@
 [Unit]
 Description=etcd
 Documentation=https://github.com/coreos/etcd
+Conflicts=etcd.service
+Conflicts=etcd2.service
 
 [Service]
 Type=notify
