@@ -1,8 +1,3 @@
-- name: Remove any old existing etcd3
-  package:
-    name: etcd3
-    state: absent
-  ignore_errors: yes
 - name: install the latest version of wget
   package:
     name: wget
@@ -33,8 +28,9 @@
 - name: Install new etcd
   shell: |
        cd /tmp/etcd-v{{ etcd_version }}-linux-amd64
-       mv etcd etcdctl /usr/local/bin
-       chmod 755 /usr/local/bin/etcd /usr/local/bin/etcdctl
+       mv etcd /usr/local/sbin/etcd3
+       mv etcdctl /local/sbin/etcd3ctl
+       chmod 755 /usr/local/sbin/etcd3 /usr/local/sbin/etcd3ctl
 - template:
      src: etcd3.service
      dest: /etc/systemd/system/etcd3.service
