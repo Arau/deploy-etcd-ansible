@@ -29,7 +29,7 @@
   shell: |
        cd /tmp/etcd-v{{ etcd_version }}-linux-amd64
        mv etcd /usr/local/sbin/etcd3
-       mv etcdctl /local/sbin/etcd3ctl
+       mv etcdctl /usr/local/sbin/etcd3ctl
        chmod 755 /usr/local/sbin/etcd3 /usr/local/sbin/etcd3ctl
 - template:
      src: etcd3.service
