@@ -17,8 +17,8 @@
      group: root
      mode:  0775
 - name:  Fetch new etcd
-  get_url: 
-     url: https://github.com/coreos/etcd/releases/download/v{{ etcd_version }}/etcd-v{{ etcd_version }}-linux-amd64.tar.gz 
+  get_url:
+     url: https://github.com/coreos/etcd/releases/download/v{{ etcd_version }}/etcd-v{{ etcd_version }}-linux-amd64.tar.gz
      dest: /tmp/
 - name: Unarchive new etcd
   unarchive: 
@@ -28,9 +28,9 @@
 - name: Install new etcd
   shell: |
        cd /tmp/etcd-v{{ etcd_version }}-linux-amd64
-       mv etcd /usr/local/sbin/etcd3
-       mv etcdctl /local/sbin/etcd3ctl
-       chmod 755 /usr/local/sbin/etcd3 /usr/local/sbin/etcd3ctl
+       mv etcd /usr/local/sbin/etcd
+       mv etcdctl /usr/local/sbin/etcdctl
+       chmod 755 /usr/local/sbin/etcd /usr/local/sbin/etcdctl
 - template:
      src: etcd3.service
      dest: /etc/systemd/system/etcd3.service
